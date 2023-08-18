@@ -1,8 +1,8 @@
-# Template: eece5560-base
+# Template: ecen433-base
 
 This template provides a boilerplate repository
 for developing ROS-based software in Duckietown.
-Use it for UML EECE 5560
+Use it for BYU ECEN433.
 
 ## How to use it
 
