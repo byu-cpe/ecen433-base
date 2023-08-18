@@ -1,7 +1,8 @@
 # parameters
-ARG REPO_NAME="eece5560-base"
-ARG DESCRIPTION="Base class repo for UML EECE 5560"
-ARG MAINTAINER="Paul Robinette (paul_robinette@uml.edu)"
+ARG REPO_NAME="ecen433-base"
+ARG DESCRIPTION="Base class repo for BYU ECEN 433"
+ARG MAINTAINER="Joshua Mangelson (mangelson@byu.edu)"
+# Thanks to Paul Robinette for sharing these materials.
 # pick an icon from: https://fontawesome.com/v4.7.0/icons/
 ARG ICON="cube"
 
@@ -31,7 +32,7 @@ ARG LAUNCHER
 RUN dt-build-env-check "${REPO_NAME}" "${MAINTAINER}" "${DESCRIPTION}"
 
 # define/create repository path
-ARG COURSE_PATH="${CATKIN_WS_DIR}/src/eece5560"
+ARG COURSE_PATH="${CATKIN_WS_DIR}/src/ecen433"
 ARG REPO_PATH="${CATKIN_WS_DIR}/src/${REPO_NAME}"
 ARG LAUNCH_PATH="${LAUNCH_DIR}/${REPO_NAME}"
 RUN mkdir -p "${REPO_PATH}"
@@ -57,7 +58,7 @@ RUN pip3 install -r ${REPO_PATH}/dependencies-py3.txt
 
 # copy the source code
 COPY ./packages "${REPO_PATH}/packages"
-COPY ./eece5560/. "${REPO_PATH}/eece5560"
+COPY ./ecen433/. "${REPO_PATH}/ecen433"
 
 # build packages
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh && \
