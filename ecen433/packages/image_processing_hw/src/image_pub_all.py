@@ -22,7 +22,7 @@ if __name__=="__main__":
     # get all images and store in a list
     ros_imgs = list()
     for i in range(5):
-        filename = pkg_path + "/sample_images/image" + str(i) + ".png"
+        filename = pkg_path + "/sample_images/image" + str(i) + ".jpg"
         #read the image file into an OpenCV image
         cv_img = cv2.imread(filename)
         # convert to a ROS sensor_msgs/Image and store for later use
