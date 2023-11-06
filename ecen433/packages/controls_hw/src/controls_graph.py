@@ -70,7 +70,7 @@ if __name__ == '__main__':
             plt.xlabel('Time (s)')
             plt.ylabel('Measured Value')
             plt.title('Vehicle Motion')
-            plt.legend(('$x_d$ (m)', '$x$ (m)', '$\dot{x}$ (m/s)'))
+            plt.legend(('$x$ (m)', '$x_d$ (m)', '$\dot{x}$ (m/s)'))
             if output_to_file:
                 plt.savefig(folder + "/output_plot.png")
             plt.pause(0.05)        
